@@ -4,7 +4,7 @@ import javax.swing.JOptionPane;
 public class FruitGUI extends javax.swing.JFrame {
 ArrayList fruit = new ArrayList();
 DefaultListModel model = new DefaultListModel();
-    
+    //Added random foods in German for the fun of it
     public FruitGUI() {
         initComponents();
         fruit.add("Apfel");
