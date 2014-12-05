@@ -25,7 +25,6 @@ public class Sorting extends javax.swing.JFrame {
         btnsel = new javax.swing.JButton();
         btninsert = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        btnquant = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -61,13 +60,6 @@ public class Sorting extends javax.swing.JFrame {
 
         jLabel1.setText("Sorting Methods");
 
-        btnquant.setText("Quantity");
-        btnquant.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnquantActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -81,17 +73,12 @@ public class Sorting extends javax.swing.JFrame {
                         .addComponent(btngen)))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnquant)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(btnsel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnbub, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btninsert, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel1))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(btnsel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnbub, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btninsert, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel1))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -108,18 +95,12 @@ public class Sorting extends javax.swing.JFrame {
                         .addGap(30, 30, 30)
                         .addComponent(btninsert)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btngen)
-                    .addComponent(btnquant))
+                .addComponent(btngen)
                 .addContainerGap(23, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    public static int changeQuant(int n){
-            n = Integer.parseInt(JOptionPane.showInputDialog("Enter how many numbers you want to generate."));
-            return n;
-        }
     
     private void btngenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btngenActionPerformed
         model.clear();
@@ -232,10 +213,6 @@ public class Sorting extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btninsertActionPerformed
 
-    private void btnquantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnquantActionPerformed
-        changeQuant(n);
-    }//GEN-LAST:event_btnquantActionPerformed
-
     
     
     public static void main(String args[]) {
@@ -274,7 +251,6 @@ public class Sorting extends javax.swing.JFrame {
     private javax.swing.JButton btnbub;
     private javax.swing.JButton btngen;
     private javax.swing.JButton btninsert;
-    private javax.swing.JButton btnquant;
     private javax.swing.JButton btnsel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
